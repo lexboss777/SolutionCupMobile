@@ -34,6 +34,7 @@ public class RollView : TraitView {
         setupView()
     }
     
+    /// common setup method for a view
     private func setupView() {
         autoDark = false
         setupShadow()
@@ -100,6 +101,7 @@ public class RollView : TraitView {
     
     // MARK: - public methods
     
+    /// adds new item to a horizontally scrolled group
     public func addItem(_ title: String, _ subtitle: String, _ image: UIImage?) {
         let roll = RollItemView()
         roll.headerLabel.text = title

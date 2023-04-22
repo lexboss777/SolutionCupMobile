@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// View that is used in RollView
 public class RollItemView : UIView {
     
     // MARK: - properties
@@ -30,6 +31,7 @@ public class RollItemView : UIView {
         setupView()
     }
     
+    /// common setup method for a view
     private func setupView() {
         
         backgroundColor = UIColor(red: 0, green: 0.063, blue: 0.141, alpha: 0.03)

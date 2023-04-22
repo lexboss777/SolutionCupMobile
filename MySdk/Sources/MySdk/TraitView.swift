@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// View that responds to a trait change
 public class TraitView : UIView {
     
     public var autoDark = true
@@ -34,8 +35,6 @@ public class TraitView : UIView {
         
         if #available(iOS 12.0, *) {
             setupShadow()
-        } else {
-            
         }
     }
 }

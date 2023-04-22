@@ -45,6 +45,7 @@ public class PanelView : TraitView {
         setupView()
     }
     
+    /// common setup method for a view
     private func setupView() {
         
         headerLabel.font = UIFont.boldSystemFont(ofSize: 20)

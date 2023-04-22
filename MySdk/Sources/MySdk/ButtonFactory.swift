@@ -11,6 +11,7 @@ import UIKit
 /// Factory for creating Buttons
 public class ButtonFactory {
     
+    /// Just a simple button
     public class func getButton(_ title: String) -> UIButton {
         let button = MyBtn(type: .system)
         button.setTitle(title, for: .normal)
@@ -20,6 +21,7 @@ public class ButtonFactory {
         return button
     }
     
+    /// Simple button with highlighted style
     public class func getButtonHighlighted(_ title: String) -> UIButton {
         let button = MyBtn(type: .system)
         button.setTitle(title, for: .normal)

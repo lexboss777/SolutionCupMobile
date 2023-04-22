@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// View that represents group of items
 public class CardView : TraitView {
     
     // MARK: - properties
@@ -33,6 +34,7 @@ public class CardView : TraitView {
         setupView()
     }
     
+    /// common setup method for a view
     private func setupView() {
         setupShadow()
         
@@ -83,6 +85,7 @@ public class CardView : TraitView {
     
     // MARK: - public methods
     
+    /// adds new item to a vertical group
     public func addItem(_ title: String, _ subtitle: String, _ image: UIImage?) {
         let panelView = PanelFactory.leftImagePanel(title, subtitle, image, false)
         panelView.subheaderBottomMargin = 0
