@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// PanelView can display title, subtitle and image
 public class PanelView : TraitView {
     
     // MARK: - properties

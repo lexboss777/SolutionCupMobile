@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// View that allows to group items with horizontal scroll.
 public class RollView : TraitView {
     
     // MARK: - properties
