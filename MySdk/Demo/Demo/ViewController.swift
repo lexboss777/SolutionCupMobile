@@ -57,11 +57,17 @@ class ViewController: UIViewController {
         
         panelButton = PanelFactory.panel(title: "Header", subtitle: "Subheader", image: image)
         panelButton.button.setTitle("Button", for: .normal)
+        panelButton.button.addAction {
+            self.onButtonClick()
+        }
         
         leftImagePanel = PanelFactory.leftImagePanel("Title", "Description", image, true)
         
         leftImagePanelClose = PanelFactory.leftImagePanel("Title", "Description", image, true)
         leftImagePanelClose.closeBtn.setImage(UIImage(named: "close")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        leftImagePanelClose.closeBtn.addAction {
+            self.onCloseClick()
+        }
         leftImagePanelClose.autoDark = false
         
         for _ in 0..<5 {
@@ -69,26 +75,44 @@ class ViewController: UIViewController {
         }
         cardView.headerLabel.text = "Header"
         cardView.rightButton.setTitle("Button", for: .normal)
+        cardView.rightButton.addAction {
+            self.onButtonClick()
+        }
         cardView.button.setTitle("Button", for: .normal)
+        cardView.button.addAction {
+            self.onButtonClick()
+        }
         
         for _ in 0..<5 {
             cardViewNoBtn.addItem("Title", "Description", image)
         }
         cardViewNoBtn.headerLabel.text = "Header"
         cardViewNoBtn.rightButton.setTitle("Button", for: .normal)
+        cardViewNoBtn.button.addAction {
+            self.onButtonClick()
+        }
         
         for _ in 0..<3 {
             rollViewBtn.addItem("Title", "Subtitle", image)
         }
         rollViewBtn.headerLabel.text = "Header"
         rollViewBtn.rightButton.setTitle("Button", for: .normal)
+        rollViewBtn.rightButton.addAction {
+            self.onButtonClick()
+        }
         rollViewBtn.button.setTitle("Button", for: .normal)
+        rollViewBtn.button.addAction {
+            self.onButtonClick()
+        }
         
         for _ in 0..<3 {
             rollView.addItem("Title", "Subtitle", image)
         }
         rollView.headerLabel.text = "Header"
         rollView.rightButton.setTitle("Button", for: .normal)
+        rollView.rightButton.addAction {
+            self.onButtonClick()
+        }
         
         views.append(panel)
         views.append(panelHeaderOnly)
@@ -137,6 +161,20 @@ class ViewController: UIViewController {
         }
         
         scrollView.contentSize = CGSize(scrollView.frame.width - 2 * marginX, y + marginY)
+    }
+    
+    func onButtonClick() {
+        displayAlert("You have clicked a button")
+    }
+    
+    func onCloseClick() {
+        displayAlert("You have clicked close button!")
+    }
+    
+    func displayAlert(_ message: String) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
