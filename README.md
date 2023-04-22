@@ -1,3 +1,5 @@
+To run **Demo** project please open `SolutionCup.xcodeproj` at the root directory and start the `Demo` target.
+
 <img width="552" alt="Screenshot 2023-04-22 at 16 35 19" src="https://user-images.githubusercontent.com/19777264/233788376-6e69e5e1-ae91-40d8-9ec4-396272b06b4f.png">
 
 # PanelView
