@@ -50,6 +50,7 @@ public class RollView : TraitView {
         button.layer.cornerRadius = 12
         addSubview(button)
         
+        scrollView.showsHorizontalScrollIndicator = false
         addSubview(scrollView)
         
         layer.cornerRadius = 20
